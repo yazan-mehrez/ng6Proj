@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="animation" [@colorStep]="'active'" *ngIf="toggle">
+        <span>Watch Me Changing My Background Color and Resizing :D</span>
+    </div>
+
+    <div class="reset">
+        <button (click)="toggleReset()">Reset</button>
+    </div>
+</div>
+
+<div class="container">
+
+    <div *ngIf="fly" class="reset" [@flyInOut]="'in'">
+        <h1>Fly</h1>
+    </div>
+
+    <div class="reset">
+        <button (click)="toggleFly()">Fly</button>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<ngx-loading [show]="loading"
+             [config]="{animationType: ngxLoadingAnimationTypes.wanderingCubes,
+              primaryColour: primaryColour, secondaryColour: secondaryColour, tertiaryColour: primaryColour, backdropBorderRadius: 'none'}">
+</ngx-loading>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" (change)="getFormValidationErrors()">
+    <div class="container">
+        <img src="assets/syriatel.png" alt="">
+        <label class="block">
+            FirstName:
+            <input type="text" formControlName="firstName"
+                   [style.border]="profileForm.get('firstName').touched && profileForm.controls['firstName'].errors ? '1px solid red' : ''">
+        </label>
+
+        <label class="block">
+            Last Name:
+            <input type="text" formControlName="lastName"
+                   [style.border]="profileForm.get('lastName').touched && profileForm.controls['lastName'].errors ? '1px solid red' : ''">
+        </label>
+
+        <label class="block">
+            E-Mail:
+            <input type="text" formControlName="email"
+                   [style.border]="profileForm.get('email').touched && profileForm.controls['email'].errors ? '1px solid red' : ''">
+            <img class="loading" *ngIf="profileForm.get('email').pending" src="assets/loading.gif" alt="">
+        </label>
+
+        <div class="errors" *ngIf="!profileForm.valid && profileForm.get('firstName').touched && profileForm.get('lastName').touched && profileForm.get('email').touched">
+            <span style="color:red">Your error/s: </span>
+            <div *ngIf="profileForm.get('firstName').touched && profileForm.controls['firstName'].hasError('required')">
+                First Name Required
+            </div>
+            <div *ngIf="profileForm.get('lastName').touched && profileForm.controls['lastName'].hasError('required')">
+                Last Name Required
+            </div>
+            <div *ngIf="profileForm.get('firstName').touched && profileForm.controls['firstName'].errors && !profileForm.controls['firstName'].hasError('required')">
+                First Name Should Be in small letters only
+            </div>
+            <div *ngIf="profileForm.get('email').touched && profileForm.controls['email'].hasError('required')">
+                Email Required
+            </div>
+            <div *ngIf="profileForm.get('email').touched && profileForm.controls['email'].errors && !profileForm.controls['email'].hasError('required')">
+                Please Write Valid Email
+            </div>
+        </div>
+        <!--<label class="block" *ngFor="let phone of phones.controls; let i = index" formArrayName="phones">-->
+        <!--<input type="text" [formControlName]="i">-->
+        <!--</label>-->
+
+        <!--<button (click)="AddPhone()">Add</button>-->
+
+        <button class="button" [disabled]="!profileForm.valid">Submit</button>
+
+    </div>
+</form>

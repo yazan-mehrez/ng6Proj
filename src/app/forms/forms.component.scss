@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  background: #e8e8e8;
+  padding: 5rem 0;
+  text-align: center;
+  margin: 0;
+}
+
+.button[disabled] {
+  background: gray;
+  cursor: default;
+}
+
+.button {
+  display: block;
+  width: auto;
+  padding: 15px 185px;
+  border: none;
+  background: #e23030;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.block {
+  display: block;
+  padding: 15px;
+  margin: 10px auto;
+  border: 1px solid;
+  width: 20%;
+  text-align: center;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #e0d8d8;
+  margin: 0 15px;
+  padding: 5px 10px;
+}
+
+.loading {
+  width: 15px;
+  vertical-align: baseline;
+}
+
+.errors {
+  width: 20%;
+  margin: auto;
+  padding: 10px;
+  background: #fbdada;
+  border: 1px solid #c5c2c2;
+}

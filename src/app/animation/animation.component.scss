@@ -1,0 +1,39 @@
+.container {
+  padding: 40px;
+  border: 2px solid #e0e1e2;
+  margin: 30px;
+}
+
+.animation {
+  padding: 20px;
+  font-size: 25px;
+  background: #ff9898;
+  text-align: center;
+}
+
+.fly {
+  padding: 50px;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reset {
+  text-align: center;
+  padding: 15px;
+}
+
+.reset button {
+  padding: 5px 40px;
+  background: #6ebde4;
+  border: none;
+  color: #af4a4a;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.center {
+  text-align: center;
+}
