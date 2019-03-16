@@ -10,6 +10,7 @@ import {NgxLoadingModule} from 'ngx-loading';
 import { AnimationComponent } from './animation/animation.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InternationalizationComponent } from './internationalization/internationalization.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { InternationalizationComponent } from './internationalization/internatio
         ReactiveFormsModule,
         BrowserAnimationsModule,
         FormsModule,
+        HttpClientModule,
         NgxLoadingModule.forRoot({}),
         AppRoutingModule
     ],
