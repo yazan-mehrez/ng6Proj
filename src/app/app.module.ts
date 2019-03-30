@@ -11,6 +11,9 @@ import { AnimationComponent } from './animation/animation.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InternationalizationComponent } from './internationalization/internationalization.component';
 import {HttpClientModule} from '@angular/common/http';
+import { SWorkerComponent } from './s-worker/s-worker.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -19,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
         FormsComponent,
         CustomValidatorDirective,
         AnimationComponent,
-        InternationalizationComponent
+        InternationalizationComponent,
+        SWorkerComponent
     ],
     imports: [
         BrowserModule,
@@ -28,7 +32,8 @@ import {HttpClientModule} from '@angular/common/http';
         FormsModule,
         HttpClientModule,
         NgxLoadingModule.forRoot({}),
-        AppRoutingModule
+        AppRoutingModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [],
     bootstrap: [AppComponent]

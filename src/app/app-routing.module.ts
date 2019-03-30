@@ -4,6 +4,7 @@ import {AnimationComponent} from './animation/animation.component';
 import {FormsComponent} from './forms/forms.component';
 import {InternationalizationComponent} from './internationalization/internationalization.component';
 import {EmployeesComponent} from './employees/employees.component';
+import {SWorkerComponent} from './s-worker/s-worker.component';
 
 const routes: Routes = [
     {
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'employees',
         component: EmployeesComponent
+    },
+    {
+        path: 'worker',
+        component: SWorkerComponent
     },
     {
         path: '',

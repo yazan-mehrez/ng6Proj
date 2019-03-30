@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {EmployeesService} from './employees.service';
-import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-employees',
@@ -16,11 +15,10 @@ export class EmployeesComponent implements OnInit {
     }
 
     ngOnInit() {
-        if (!this.cache$) {
-            this.empService.getEmployee().subscribe(data => {
-                this.employee = data;
-            });
-        }
+        this.empService.getEmployee().subscribe(data => {
+            this.employee = data;
+        });
+
     }
 
 }
