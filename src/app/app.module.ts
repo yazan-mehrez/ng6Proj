@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SWorkerComponent } from './s-worker/s-worker.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { CourcesComponent } from './cources/cources.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { environment } from '../environments/environment';
         CustomValidatorDirective,
         AnimationComponent,
         InternationalizationComponent,
-        SWorkerComponent
+        SWorkerComponent,
+        CourcesComponent
     ],
     imports: [
         BrowserModule,

@@ -22,7 +22,10 @@
     "@angular/pwa": "^0.8.7",
     "@angular/router": "^6.1.0",
     "@angular/service-worker": "^6.1.0",
+    "bcrypt": "^3.0.5",
     "core-js": "^2.5.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.16.0",
     "ngx-loading": "^3.0.1",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
